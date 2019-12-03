@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+#import "Proxy.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    id<AnimalActivity>activitier = (id)[[Person alloc] init];
+    Proxy *pr = [[Proxy alloc] init];
+    pr.activity = activitier;
+    [pr.activity ead:@"水果"];
+    [pr.activity sleep];
+//    [self.view endEditing:YES];
+    
 }
 
 

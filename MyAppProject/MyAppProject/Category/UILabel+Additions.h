@@ -8,10 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface UILabel (Additions)
+
++ (UILabel *(^)(void))hrt_label;
+
+- (UILabel *(^)(CGRect frame))hrt_frame;
+
+- (UILabel *(^)(NSString *title))hrt_title;
+
+- (UILabel *(^)(UIColor *textColor))hrt_textColor;
+
+- (UILabel *(^)(CGFloat fontSize))hrt_fontSize;
+
+- (UILabel *(^)(NSTextAlignment textAlignment))hrt_textAlignment;
+
+- (UILabel *(^)(NSInteger numberOfLines))hrt_numberOfLines;
+
+- (UILabel *(^)(NSAttributedString *attributedText))hrt_attributedText;
+
+- (UILabel *(^)(UIView *superView))hrt_superView;
 
 @end
 
-NS_ASSUME_NONNULL_END
